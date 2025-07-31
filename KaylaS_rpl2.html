@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalala Bakery</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #fff5f8, #fffaf0);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    /* Background emoji lucu */
+    body::before {
+        content: "🧁 🍩 🍪 🍰 ☕ 🥐";
+        position: absolute;
+        font-size: 40px;
+        top: 20%;
+        left: -20px;
+        opacity: 0.08;
+        animation: floatEmoji 6s infinite ease-in-out;
+    }
+    body::after {
+        content: "🍰 🥖 🧁 🍫 🍪 🥐";
+        position: absolute;
+        font-size: 40px;
+        bottom: 20%;
+        right: -20px;
+        opacity: 0.08;
+        animation: floatEmoji 7s infinite ease-in-out reverse;
+    }
+    @keyframes floatEmoji {
+        0%,100% { transform: translateY(0);}
+        50% { transform: translateY(10px);}
+    }
+
+    header {
+        text-align: center;
+        background: linear-gradient(135deg, #ff9bb3, #ff4d79);
+        padding: 20px;
+        color: white;
+        font-family: 'Pacifico', cursive;
+        font-size: 28px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        position: relative;
+    }
+    header::after {
+        content: "🧁🍓🍰";
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+        font-size: 22px;
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    form {
+        background: #fff;
+        padding: 25px;
+        border-radius: 25px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        width: 380px;
+        animation: fadeIn 0.8s ease-in-out;
+        border: 4px double #ffb6c1;
+        position: relative;
+    }
+    form::before {
+        content: "🍪";
+        position: absolute;
+        font-size: 30px;
+        left: -20px;
+        top: -15px;
+    }
+    form::after {
+        content: "🧁";
+        position: absolute;
+        font-size: 30px;
+        right: -20px;
+        bottom: -15px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #ff4d79;
+        margin-bottom: 20px;
+        font-family: 'Pacifico', cursive;
+    }
+
+    label {
+        display: block;
+        margin-top: 12px;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #444;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea,
+    input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 12px;
+        border: 2px solid #ffd6e0;
+        border-radius: 12px;
+        font-size: 14px;
+        background-color: #fff9fb;
+        transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #ff80a8;
+        outline: none;
+        box-shadow: 0 0 8px rgba(255,128,168,0.4);
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 70px;
+    }
+
+    select option {
+        padding: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #ff80a8, #ff4d79);
+        color: white;
+        border: none;
+        border-radius: 18px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 15px;
+        cursor: pointer;
+        box-shadow: 0 5px 10px rgba(255,77,121,0.3);
+        transition: transform 0.2s ease, background 0.3s ease;
+        font-family: 'Pacifico', cursive;
+        position: relative;
+        overflow: hidden;
+    }
+    button:hover {
+        transform: scale(1.05);
+        background: linear-gradient(135deg, #ff4d79, #ff1a5c);
+    }
+    button::after {
+        content: "✨";
+        position: absolute;
+        right: 10px;
+        animation: sparkle 1.5s infinite;
+    }
+    @keyframes sparkle {
+        0%,100% { transform: scale(1); opacity: 1;}
+        50% { transform: scale(1.2); opacity: 0.7;}
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background: #ff4d79;
+        color: white;
+        font-size: 12px;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 500px) {
+        form {
+            width: 95%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    🎀 Selamat Datang di Kalala Bakery 🎀
+</header>
+
+<main>
+    <form>
+        <h2>🍓 Lengkapi Pesanan Lezatmu 🍰
+</h2>
+
+        <label>Nama pemesan</label>
+        <input type="text" name="nama_pemesan" required>
+
+content://com.android.externalstorage.documents/tree/primary%3Alatihan%20HTML%2FKayla%20S.%20pbo.html::primary:latihan HTML/Kayla S. pbo.html/kalala.html        <label>Pilihan menu Kalala Bakery</label>
+        <select name="kategori" required>
+            <option disabled selected>🍽 Pilih Menu</option>
+            <option value="Roti">🥖 Roti</option>
+            <option value="Pastry">🥐 Pastry</option>
+            <option value="Kue ulang tahun">🍰 kue ulang tahun</option>
+            <option value="Kue kering & cookies">🍪 Kue kering & cookies</option>
+            <option value="Dessert">🧁 Dessert</option>
+            <option value="Minuman">☕ Minuman</option>
+        </select>
+
+        <label>Alamat tujuan</label>
+        <input type="text" required>
+
+        <label>Nomor handphone </label>
+        <input type="number" name="nomor handphone" required>
+
+        <label>Catatan pemesan</label>
+        <textarea name="catatan pemesan" placeholder="Tuliskan catatan singkat..." required></textarea>
+
+        <label>Referensi pesanan kue ulang tahun *jika ada</label>
+        <input type="file" accept="image/*" required>
+
+        <button type="submit">🍫 Ayo Proses Pesananmu 🥐</button>
+    </form>
+</main>
+
+<footer>
+    © 2025 Kalala Bakery | Semua Hak Dilindungi 🍩
+</footer>
+
+</body>
+</html>
