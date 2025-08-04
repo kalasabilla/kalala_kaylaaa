@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Tails Vet 🐾✨</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #fff0d6; /* Beige dasar */
+        color: #4b2e15; /* Coklat */
+        background-image: 
+            radial-gradient(circle at 10px 10px, rgba(0,0,0,0.05) 1px, transparent 1px),
+            radial-gradient(circle at 30px 30px, rgba(0,0,0,0.05) 1px, transparent 1px);
+        background-size: 40px 40px; /* ukuran pola */
+    }
+
+    /* Navbar */
+    .navbar {
+        background: #f2d6c1; /* Pink pastel */
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar h2 {
+        margin: 0;
+        color: #4b2e15;
+        font-weight: bold;
+        animation: slideIn 1s ease-out;
+    }
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar ul li {
+        display: inline;
+    }
+    .navbar ul li a {
+        color: #4b2e15;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    .navbar ul li a:hover {
+        color: #8b5e3c; /* Coklat lebih gelap */
+    }
+
+    /* Animasi Navbar */
+    @keyframes slideIn {
+        from { transform: translateX(-100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+
+    /* Container Form */
+    .container {
+        max-width: 500px;
+        margin: 40px auto;
+        background: #fff8f2;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border: 3px solid #f2d6c1;
+        animation: floatUp 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-5px); }
+    }
+
+    h1 {
+        text-align: center;
+        color: #4b2e15;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #4b2e15;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0 15px;
+        border-radius: 10px;
+        border: 2px solid #f2d6c1;
+        background-color: #fff0d6;
+        transition: all 0.3s ease;
+    }
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        border-color: #e6b7a6;
+        box-shadow: 0 0 8px #e6b7a6;
+    }
+
+    /* Tombol */
+    button {
+        background-color: #4b2e15;
+        color: white;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+        animation: pulse 2s infinite;
+    }
+    button:hover {
+        background-color: #8b5e3c;
+        transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(75, 46, 21, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(75, 46, 21, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(75, 46, 21, 0); }
+    }
+
+    /* Footer */
+    footer {
+        background: #f2d6c1;
+        color: #4b2e15;
+        text-align: center;
+        padding: 10px;
+        margin-top: 40px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2>🐶 Happy Tails Vet 🐾</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Layanan</a></li>
+        <li><a href="#">Kontak</a></li>
+    </ul>
+</div>
+
+<!-- Form Container -->
+<div class="container">
+    <h1>Happy Tails Vet 🐾✨</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <label>Nama Pemilik Hewan 🐕</label>
+        <input type="text" name="nama_pemilik" required>
+
+        <label>Jenis Hewan Peliharaan 🐾</label>
+        <input type="text" name="jenis_hewan" required>
+
+        <label>Jenis Layanan Kesehatan 🏥</label>
+        <select required>
+            <option disabled selected>🐾 Pilih jenis layanan</option>
+            <optgroup label="🔍 Pemeriksaan & Pencegahan">
+                <option value="Pemeriksaan Umum">🩺 Pemeriksaan Umum</option>
+                <option value="Vaksinasi">💉 Vaksinasi & Pencegahan Penyakit</option>
+            </optgroup>
+            <optgroup label="⚕️ Pengobatan">
+                <option value="Pengobatan">💊 Pengobatan & Penanganan Penyakit</option>
+                <option value="Bedah">🔪 Tindakan Bedah</option>
+            </optgroup>
+            <optgroup label="🦷 Perawatan Khusus">
+                <option value="Perawatan Gigi">🦷 Perawatan Gigi & Mulut</option>
+                <option value="Layanan Penunjang">🔬 Layanan Penunjang</option>
+            </optgroup>
+        </select>
+
+        <label>Umur Hewan Peliharaan 🐾</label>
+        <input type="number" name="umur_hewan" required>
+
+        <label>Catatan mengenai gejala hewan 🐱</label>
+        <textarea name="catatan_gejala" rows="4" required></textarea>
+
+        <button type="submit" name="submit">Kirim Formulir Perawatan 🐾</button>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Happy Tails Vet | Dibuat dengan 🐶❤️ untuk hewan kesayangan Anda</p>
+</footer>
+
+</body>
+</html>
